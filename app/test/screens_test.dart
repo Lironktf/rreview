@@ -3,11 +3,11 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:openreview/screens/library_screen.dart';
-import 'package:openreview/screens/review_screen.dart';
-import 'package:openreview/services/app_scope.dart';
-import 'package:openreview/theme/theme.dart';
-import 'package:openreview/widgets/eval_graph.dart';
+import 'package:rreview/screens/library_screen.dart';
+import 'package:rreview/screens/review_screen.dart';
+import 'package:rreview/services/app_scope.dart';
+import 'package:rreview/theme/theme.dart';
+import 'package:rreview/widgets/eval_graph.dart';
 
 import 'fixtures.dart';
 
@@ -45,7 +45,7 @@ Future<void> loadRealFonts() async {
 void main() {
   late Directory tmp;
   setUpAll(loadRealFonts);
-  setUp(() async => tmp = await Directory.systemTemp.createTemp('openreview_test'));
+  setUp(() async => tmp = await Directory.systemTemp.createTemp('rreview_test'));
   tearDown(() => tmp.delete(recursive: true));
 
   testWidgets('library shows the imported game and opens the review', (tester) async {
@@ -121,7 +121,8 @@ void main() {
     addTearDown(tester.view.reset);
     final s = (await tester.runAsync(() => testServices(tmp, reviews: [sampleReview()])))!;
     for (final b in [Brightness.light, Brightness.dark]) {
-      await tester.pumpWidget(app(s, const ReviewScreen(reviewId: 'sample'), brightness: b));
+      // Key per brightness so the second pass starts on the Moves tab, not where the first left off.
+      await tester.pumpWidget(app(s, KeyedSubtree(key: ValueKey(b), child: const ReviewScreen(reviewId: 'sample')), brightness: b));
       await settle(tester);
       for (var i = 0; i < 15; i++) {
         await tester.tap(find.byTooltip('Next move'));
