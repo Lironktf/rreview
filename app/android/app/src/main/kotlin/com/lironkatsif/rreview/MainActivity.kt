@@ -1,4 +1,4 @@
-package com.lironkatsif.openreview
+package com.lironkatsif.rreview
 
 import android.content.Context
 import android.content.Intent
@@ -26,8 +26,8 @@ import java.util.UUID
 /**
  * Hosts the Flutter engine and implements the native half of the share intake:
  *
- *  MethodChannel "openreview/share_intake"         -> takePending(): List<Map>
- *  EventChannel  "openreview/share_intake/events"  -> items arriving while running
+ *  MethodChannel "rreview/share_intake"         -> takePending(): List<Map>
+ *  EventChannel  "rreview/share_intake/events"  -> items arriving while running
  *
  * Share / VIEW intents are converted into items (see [makeItem] for the wire
  * format shared with lib/platform/share_intake.dart). Items are emitted to the
@@ -37,9 +37,9 @@ import java.util.UUID
 class MainActivity : FlutterActivity() {
     companion object {
         private const val TAG = "ShareIntake"
-        private const val METHOD_CHANNEL = "openreview/share_intake"
-        private const val EVENT_CHANNEL = "openreview/share_intake/events"
-        private const val PREFS_NAME = "openreview_share_intake"
+        private const val METHOD_CHANNEL = "rreview/share_intake"
+        private const val EVENT_CHANNEL = "rreview/share_intake/events"
+        private const val PREFS_NAME = "rreview_share_intake"
         private const val KEY_PENDING = "pending"
         private const val SOURCE = "android-intent"
         private const val IMPORTS_DIR = "imports"
@@ -127,7 +127,7 @@ class MainActivity : FlutterActivity() {
                 if (uri != null) {
                     when (uri.scheme?.lowercase(Locale.ROOT)) {
                         "content", "file" -> fileItem(uri, intent.type)?.let { items.add(it) }
-                        // "openreview" just brings the app to the front; nothing to import.
+                        // "rreview" just brings the app to the front; nothing to import.
                     }
                 }
             }

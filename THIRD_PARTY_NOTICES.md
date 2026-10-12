@@ -1,6 +1,6 @@
 # Third-party notices
 
-OpenReview itself is licensed under the GNU General Public License v3.0 or later (see LICENSE).
+rreview itself is licensed under the GNU General Public License v3.0 or later (see LICENSE).
 
 | Component | Location | Licence |
 |---|---|---|
@@ -14,5 +14,5 @@ OpenReview itself is licensed under the GNU General Public License v3.0 or later
 | lichess-org/chess-openings (ECO opening names) | `app/assets/openings/*.tsv`, `COPYING.txt` | CC0-1.0 |
 | Flutter SDK and pub.dev packages (flutter_svg, path_provider, file_picker, share_plus, url_launcher, http, ffi) | `pubspec.lock` | BSD-3-Clause / MIT; full texts in the in-app licence page |
 
-Chess.com and Lichess are trademarks of their respective owners. OpenReview is not affiliated with either; it reads
+Chess.com and Lichess are trademarks of their respective owners. rreview is not affiliated with either; it reads
 game data only through their documented public APIs.

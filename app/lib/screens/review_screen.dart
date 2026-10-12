@@ -419,7 +419,7 @@ class _ReviewScreenState extends State<ReviewScreen> {
     final sb = StringBuffer()
       ..writeln('${g.white} ${g.result.pgn} ${g.black}')
       ..writeln(
-        'Accuracy (OpenReview): ${g.white} ${acc(w.accuracy)} · ${g.black} ${acc(b.accuracy)}',
+        'Accuracy (rreview): ${g.white} ${acc(w.accuracy)} · ${g.black} ${acc(b.accuracy)}',
       );
     for (final l in [
       MoveLabel.blunder,
@@ -438,7 +438,7 @@ class _ReviewScreenState extends State<ReviewScreen> {
       );
     }
     if (r.sourceUrl != null) sb.writeln(r.sourceUrl);
-    sb.writeln('Reviewed with OpenReview (${r.engineId}).');
+    sb.writeln('Reviewed with rreview (${r.engineId}).');
     Uint8List? png;
     try {
       final boundary =
@@ -458,7 +458,7 @@ class _ReviewScreenState extends State<ReviewScreen> {
                 XFile.fromData(
                   png,
                   mimeType: 'image/png',
-                  name: 'openreview.png',
+                  name: 'rreview.png',
                 ),
               ],
       ),

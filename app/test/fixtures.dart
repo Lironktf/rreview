@@ -1,12 +1,12 @@
 import 'dart:io';
 
 import 'package:chess_core/chess_core.dart';
-import 'package:openreview/services/analysis_controller.dart';
-import 'package:openreview/services/app_scope.dart';
-import 'package:openreview/services/engine_service.dart';
-import 'package:openreview/services/import_service.dart';
-import 'package:openreview/services/review_store.dart';
-import 'package:openreview/services/settings_service.dart';
+import 'package:rreview/services/analysis_controller.dart';
+import 'package:rreview/services/app_scope.dart';
+import 'package:rreview/services/engine_service.dart';
+import 'package:rreview/services/import_service.dart';
+import 'package:rreview/services/review_store.dart';
+import 'package:rreview/services/settings_service.dart';
 import 'package:review_core/review_core.dart';
 
 /// A completed review built from scripted evaluations (no engine needed).

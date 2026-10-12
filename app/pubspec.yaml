@@ -1,4 +1,4 @@
-name: openreview
+name: rreview
 description: "Free, unlimited chess game reviews with Stockfish on your phone."
 publish_to: 'none'
 version: 1.0.0+1

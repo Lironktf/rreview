@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:openreview/platform/share_intake.dart';
+import 'package:rreview/platform/share_intake.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -63,7 +63,7 @@ void main() {
     });
 
     test('channel implementation decodes takePending', () async {
-      const channel = MethodChannel('openreview/share_intake');
+      const channel = MethodChannel('rreview/share_intake');
       final messenger =
           TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger;
       messenger.setMockMethodCallHandler(channel, (call) async {
@@ -94,7 +94,7 @@ void main() {
     });
 
     test('channel implementation tolerates a missing native side', () async {
-      const channel = MethodChannel('openreview/share_intake');
+      const channel = MethodChannel('rreview/share_intake');
       final messenger =
           TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger;
       messenger.setMockMethodCallHandler(channel, null);
@@ -102,7 +102,7 @@ void main() {
     });
 
     test('channel implementation streams incoming items', () async {
-      const events = EventChannel('openreview/share_intake/events');
+      const events = EventChannel('rreview/share_intake/events');
       final messenger =
           TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger;
       messenger.setMockStreamHandler(

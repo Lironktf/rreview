@@ -1,4 +1,4 @@
-# OpenReview design rules
+# rreview design rules
 
 Distilled from design research (2026-10-11; sources in `docs/research/design-research.md`). Every screen is
 checked against this list before it is considered done.

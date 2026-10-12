@@ -1,4 +1,4 @@
-/// Chess rules, FEN, SAN and PGN parsing for OpenReview.
+/// Chess rules, FEN, SAN and PGN parsing for rreview.
 ///
 /// Everything here is pure Dart with no dependencies so that it can be shared
 /// between the mobile app, tests and tooling.

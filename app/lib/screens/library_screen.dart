@@ -43,7 +43,7 @@ class _LibraryScreenState extends State<LibraryScreen> {
     final t = Theme.of(context).textTheme;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('OpenReview'),
+        title: const Text('rreview'),
         actions: [
           IconButton(
             tooltip: 'Settings',
@@ -155,7 +155,7 @@ class _LibraryScreenState extends State<LibraryScreen> {
             Text('No games yet', style: t.titleLarge),
             const SizedBox(height: Space.s),
             Text(
-              'Finish a game on Chess.com, tap Share, and pick OpenReview. '
+              'Finish a game on Chess.com, tap Share, and pick rreview. '
               'Or import a game link, paste PGN, or open a .pgn file.',
               style: t.bodyMedium?.copyWith(color: c.textSecondary),
             ),

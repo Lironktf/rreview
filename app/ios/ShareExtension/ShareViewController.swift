@@ -1,14 +1,14 @@
 import UIKit
 import UniformTypeIdentifiers
 
-/// Principal class of the OpenReview share extension (no storyboard; see
+/// Principal class of the rreview share extension (no storyboard; see
 /// `NSExtensionPrincipalClass` in Info.plist).
 ///
 /// Flow:
 ///  1. Collect every attachment of every input item: web URLs, plain text,
 ///     and `.pgn` / text files (copied into the App Group inbox, max 5 MB).
 ///  2. Append them to `pending.json` in the App Group container.
-///  3. Ask the host app to open `openreview://import` through the responder
+///  3. Ask the host app to open `rreview://import` through the responder
 ///     chain (not officially supported by Apple; see docs/SHARE_FLOW.md).
 ///  4. Complete the request. If step 3 does nothing, the main app still
 ///     drains `pending.json` on its next launch / foreground.
@@ -31,7 +31,7 @@ final class ShareViewController: UIViewController {
 
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
-    label.text = "Sending to OpenReview…"
+    label.text = "Sending to rreview…"
     label.font = UIFont.preferredFont(forTextStyle: .body)
     label.textColor = .secondaryLabel
     label.textAlignment = .center
@@ -205,7 +205,7 @@ final class ShareViewController: UIViewController {
   }
 
   /// Walks the responder chain to the host `UIApplication` and asks it to open
-  /// `openreview://import`. Apple does not officially allow extensions to open
+  /// `rreview://import`. Apple does not officially allow extensions to open
   /// URLs; this is best-effort and the app drains `pending.json` anyway.
   private func openHostApp() {
     guard let url = URL(string: ShareInbox.importURLString) else { return }

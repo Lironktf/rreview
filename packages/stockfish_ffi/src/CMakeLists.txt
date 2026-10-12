@@ -1,4 +1,4 @@
-# Shared native build for the OpenReview Stockfish FFI plugin (Linux desktop and Android).
+# Shared native build for the rreview Stockfish FFI plugin (Linux desktop and Android).
 # iOS compiles the same sources through the CocoaPods podspec in ../ios.
 cmake_minimum_required(VERSION 3.10)
 

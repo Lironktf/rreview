@@ -53,7 +53,7 @@ docs/RELEASE_IOS.md for what to check on a Mac.
 
 Stockfish is GPLv3. Linking it into the app makes the whole app a derivative work, so:
 
-1. **OpenReview is licensed GPL-3.0-or-later** (`LICENSE` at the repository root, also shown in-app under
+1. **rreview is licensed GPL-3.0-or-later** (`LICENSE` at the repository root, also shown in-app under
    Settings → Licences).
 2. **Corresponding source**: the complete source of every released build is published at the repository URL shown in
    the app (GPLv3 §6d, equivalent access through a network server). Tag each App Store build in git so that the exact

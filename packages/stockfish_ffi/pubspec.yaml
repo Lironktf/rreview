@@ -1,7 +1,7 @@
 name: stockfish_ffi
 description: "Stockfish 19 (GPLv3) compiled into the app and driven over UCI through Dart FFI."
 version: 1.0.0
-homepage: https://github.com/Lironktf/openreview
+homepage: https://github.com/Lironktf/rreview
 
 environment:
   sdk: ^3.13.5

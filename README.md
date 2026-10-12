@@ -1,4 +1,4 @@
-# OpenReview
+# rreview
 
 Free, unlimited chess game reviews on your phone. Share a game from Chess.com (or paste a link, PGN, or a `.pgn`
 file) and get an interactive review powered by Stockfish 19 running **on the device**: move labels, evaluation bar

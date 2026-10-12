@@ -10,9 +10,9 @@ import UniformTypeIdentifiers
 ///   pending.json        JSON array of items (see `makeItem`)
 ///   shared/inbox/<id>-<fileName>   files copied by the extension
 enum ShareInbox {
-  static let appGroupId = "group.com.lironkatsif.openreview"
-  static let urlScheme = "openreview"
-  static let importURLString = "openreview://import"
+  static let appGroupId = "group.com.lironkatsif.rreview"
+  static let urlScheme = "rreview"
+  static let importURLString = "rreview://import"
   static let pendingFileName = "pending.json"
   static let inboxDirectoryName = "shared/inbox"
   /// Files larger than this are refused (PGN files are tiny).

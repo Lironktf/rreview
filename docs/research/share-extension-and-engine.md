@@ -11,7 +11,7 @@ Sub-agent research summary. [V] verified from primary source, [I] inference.
 - Apple's position [V]: "App extensions are not allowed to open URLs directly" (DTS, forums thread 764570);
   `NSExtensionContext.open` only works for Today extensions. No documented App Review rejection of the responder-chain
   trick was found; thousands of apps ship it. Mitigation: always persist the payload in the App Group first, so the
-  main app picks it up on its next launch/foreground regardless of whether the redirect works. OpenReview does this.
+  main app picks it up on its next launch/foreground regardless of whether the redirect works. rreview does this.
 - Memory/lifecycle [V]: extensions have much lower memory limits (~120 MB per secondary sources), must launch in well
   under one second and must call `completeRequest`. Do not embed the Flutter engine in the extension.
 - UTIs [V]: no system `com.chess.pgn`; Apple's Chess.app exports `com.apple.chess.pgn` (conforms to plain text).

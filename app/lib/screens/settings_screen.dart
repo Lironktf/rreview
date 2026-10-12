@@ -218,7 +218,7 @@ class SettingsScreen extends StatelessWidget {
                   title: const Text('How moves are labelled'),
                   subtitle: const Text('Expected-score loss, thresholds and the accuracy formula'),
                   trailing: Icon(Icons.open_in_new_rounded, size: 18, color: c.textTertiary),
-                  onTap: () => launchUrl(Uri.parse('https://github.com/Lironktf/openreview/blob/main/docs/CLASSIFICATION.md'),
+                  onTap: () => launchUrl(Uri.parse('https://github.com/Lironktf/rreview/blob/main/docs/CLASSIFICATION.md'),
                       mode: LaunchMode.externalApplication),
                 ),
               ]),

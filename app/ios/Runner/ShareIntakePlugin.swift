@@ -2,16 +2,16 @@ import Flutter
 import UIKit
 
 /// Runner-side half of the share intake: exposes
-///   MethodChannel "openreview/share_intake"          (takePending)
-///   EventChannel  "openreview/share_intake/events"   (incoming items)
+///   MethodChannel "rreview/share_intake"          (takePending)
+///   EventChannel  "rreview/share_intake/events"   (incoming items)
 /// and receives URLs from `SceneDelegate`.
 ///
 /// All state is touched on the main thread only (scene callbacks and
 /// platform-channel handlers both run there).
 final class ShareIntakePlugin: NSObject, FlutterStreamHandler {
   static let shared = ShareIntakePlugin()
-  static let methodChannelName = "openreview/share_intake"
-  static let eventChannelName = "openreview/share_intake/events"
+  static let methodChannelName = "rreview/share_intake"
+  static let eventChannelName = "rreview/share_intake/events"
   static let importsDirectoryName = "imports"
 
   private var methodChannel: FlutterMethodChannel?
@@ -76,7 +76,7 @@ final class ShareIntakePlugin: NSObject, FlutterStreamHandler {
         deliver([item])
       }
     } else if url.scheme?.lowercased() == ShareInbox.urlScheme {
-      // openreview://import (from the share extension): payload is in the App Group.
+      // rreview://import (from the share extension): payload is in the App Group.
       drainSharedInbox()
     }
   }
@@ -157,7 +157,7 @@ final class ShareIntakePlugin: NSObject, FlutterStreamHandler {
     return moved
   }
 
-  /// "Open in OpenReview" for a .pgn (or text) file. With
+  /// "Open in rreview" for a .pgn (or text) file. With
   /// LSSupportsOpeningDocumentsInPlace = false the system hands us a copy in
   /// Documents/Inbox; we copy it into imports/ and remove the Inbox copy.
   private func importOpenedFile(_ url: URL) -> [String: Any]? {

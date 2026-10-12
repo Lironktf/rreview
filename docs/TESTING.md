@@ -58,7 +58,7 @@ the same process.
   library: `app/test/goldens/*.png`. These are the screenshots used to check the design rules in docs/DESIGN.md.
 - Share-intake channel tests (JSON round trip, lenient parsing, no-op platform implementation, mocked method and
   event channels).
-- **Live desktop run with the real engine**: launched `openreview` with `OPENREVIEW_IMPORT=sample.pgn`. Observed in the
+- **Live desktop run with the real engine**: launched `rreview` with `RREVIEW_IMPORT=sample.pgn`. Observed in the
   persisted data: the 98 MB network was copied once, Stockfish 19 started in-process, all 50 plies were analysed at
   depth 16, 13 key positions were refined at depth 20 with `searchmoves`, the review reached `complete`, the
   evaluation cache was written, and the labels/explanations matched the real-engine unit test (e.g. "This leaves the

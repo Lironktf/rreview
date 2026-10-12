@@ -1,5 +1,5 @@
 // swift-tools-version: 5.9
-// Swift Package manifest for the OpenReview Stockfish FFI plugin (Flutter SPM
+// Swift Package manifest for the rreview Stockfish FFI plugin (Flutter SPM
 // integration). Mirrors the CocoaPods podspec next to it; flags follow the
 // production multistockfish package (lichess) for Stockfish 19 on iOS.
 import PackageDescription

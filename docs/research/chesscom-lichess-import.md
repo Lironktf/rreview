@@ -1,6 +1,6 @@
 # Chess.com / Lichess game-import research (verified 2026-10-11)
 
-Research conducted by a sub-agent for OpenReview; [V] = verified by fetching the page or endpoint,
+Research conducted by a sub-agent for rreview; [V] = verified by fetching the page or endpoint,
 [S] = sourced from a third party, [I] = inference.
 
 ## 1. What the Chess.com mobile app puts in the share sheet
@@ -48,7 +48,7 @@ shape in March 2025 and may again.
   info is requested. Read-only; respect Chess.com IP (board colours, piece sets, glyphs).
 - [V] Undocumented/private: `https://www.chess.com/callback/live/game/{id}` returns JSON with TCN-encoded moves,
   `cache-control: private`, no CORS header; the chess-web-api README says its use violates the Terms of Service.
-  **OpenReview does not use it.**
+  **rreview does not use it.**
 
 ## 3. Resolving a game URL with public endpoints only
 

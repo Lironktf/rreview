@@ -1,4 +1,4 @@
-# OpenReview iOS Podfile.
+# rreview iOS Podfile.
 #
 # Flutter 3.47 manages the engine and plugins through Swift Package Manager by
 # default, so this file is only consulted when a CocoaPods-only dependency (for

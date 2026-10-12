@@ -1,5 +1,5 @@
 name: chess_core
-description: Chess rules, FEN, SAN and PGN for OpenReview. Pure Dart, no dependencies.
+description: Chess rules, FEN, SAN and PGN for rreview. Pure Dart, no dependencies.
 version: 0.1.0
 publish_to: none
 environment:

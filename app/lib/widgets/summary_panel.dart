@@ -46,7 +46,7 @@ class SummaryPanel extends StatelessWidget {
         ),
         const SizedBox(height: Space.xs),
         Text(
-          'OpenReview accuracy: 100 × e^(−4.2 × expected-score loss) per move, averaged. Not comparable with other sites.',
+          'rreview accuracy: 100 × e^(−4.2 × expected-score loss) per move, averaged. Not comparable with other sites.',
           style: t.bodySmall?.copyWith(color: c.textTertiary),
         ),
         const SizedBox(height: Space.xl),

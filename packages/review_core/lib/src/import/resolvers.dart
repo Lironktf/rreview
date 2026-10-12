@@ -8,7 +8,7 @@ import 'package:http/http.dart' as http;
 import 'game_link.dart';
 import 'import_result.dart';
 
-const userAgent = 'OpenReview/1.0 (open-source chess review app; https://github.com/Lironktf/openreview)';
+const userAgent = 'rreview/1.0 (open-source chess review app; https://github.com/Lironktf/rreview)';
 
 class GameResolver {
   GameResolver({http.Client? client, this.maxChesscomMonths = 36}) : _client = client ?? http.Client();

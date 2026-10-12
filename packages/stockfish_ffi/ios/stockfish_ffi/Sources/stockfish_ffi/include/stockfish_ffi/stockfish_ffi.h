@@ -1,4 +1,4 @@
-// C interface of the OpenReview Stockfish bridge (see sf_bridge.cpp).
+// C interface of the rreview Stockfish bridge (see sf_bridge.cpp).
 #ifndef STOCKFISH_FFI_H
 #define STOCKFISH_FFI_H
 

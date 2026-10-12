@@ -1,6 +1,6 @@
-# OpenReview — architecture and build plan
+# rreview — architecture and build plan
 
-Written 2026-10-11. OpenReview is a mobile chess analysis app: share a game from Chess.com (or paste a PGN /
+Written 2026-10-11. rreview is a mobile chess analysis app: share a game from Chess.com (or paste a PGN /
 URL / .pgn file), get an unlimited, local, Stockfish-powered review with move labels, an evaluation graph,
 explanations, a guided tour of the key moments, and a "try again" mode.
 
@@ -21,7 +21,7 @@ explanations, a guided tour of the key moments, and a "try again" mode.
 
 ```
 chessy/
-  app/                     Flutter app "OpenReview" (ios/, android/, linux/, lib/, test/)
+  app/                     Flutter app "rreview" (ios/, android/, linux/, lib/, test/)
   packages/chess_core/     rules, FEN, SAN, PGN, perft tests
   packages/review_core/    UCI client, analysis pipeline, classification, accuracy, explanations, book
   packages/stockfish_ffi/  Flutter FFI plugin: Stockfish 19 + bridge (podspec, CMake)
@@ -58,7 +58,7 @@ Quick / Standard / Deep settings differ in D1, D2, and the number of refined pos
 
 ## Assumptions (to be confirmed by the owner)
 
-- Bundle id `com.lironkatsif.openreview`, App Group `group.com.lironkatsif.openreview` (placeholders; change
+- Bundle id `com.lironkatsif.rreview`, App Group `group.com.lironkatsif.rreview` (placeholders; change
   in one place, see docs/RELEASE_IOS.md).
 - The app is distributed under GPLv3 (required by Stockfish); the full source is the corresponding source.
 - Chess.com game links are resolved through the public player-archives API, which needs the player's

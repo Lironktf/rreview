@@ -3,7 +3,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../theme/tokens.dart';
 
-const sourceUrl = 'https://github.com/Lironktf/openreview';
+const sourceUrl = 'https://github.com/Lironktf/rreview';
 
 class AboutScreen extends StatelessWidget {
   const AboutScreen({super.key});
@@ -22,7 +22,7 @@ class AboutScreen extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.fromLTRB(Space.l, Space.s, Space.l, Space.xxl),
         children: [
-          Text('OpenReview', style: t.titleLarge),
+          Text('rreview', style: t.titleLarge),
           const SizedBox(height: Space.xs),
           Text(
             'Free software under the GNU General Public License v3.0 or later. The complete corresponding source code '
@@ -68,7 +68,7 @@ class AboutScreen extends StatelessWidget {
           const SizedBox(height: Space.xs),
           TextButton(
             style: TextButton.styleFrom(padding: EdgeInsets.zero, alignment: Alignment.centerLeft),
-            onPressed: () => showLicensePage(context: context, applicationName: 'OpenReview', applicationLegalese: 'GPL-3.0-or-later'),
+            onPressed: () => showLicensePage(context: context, applicationName: 'rreview', applicationLegalese: 'GPL-3.0-or-later'),
             child: const Text('Show package licences'),
           ),
           const SizedBox(height: Space.l),

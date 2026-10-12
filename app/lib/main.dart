@@ -26,7 +26,7 @@ Future<void> main(List<String> args) async {
     File('${support.path}/settings.json'),
   );
   final engine = EngineService(supportDir: support);
-  final store = ReviewStore(Directory('${docs.path}/openreview'));
+  final store = ReviewStore(Directory('${docs.path}/rreview'));
   final cache = FileEvalCache(File('${support.path}/evals.json'));
   await cache.load();
   final analysis = AnalysisController(
@@ -42,7 +42,7 @@ Future<void> main(List<String> args) async {
     importer: importer,
   );
   runApp(
-    OpenReviewApp(
+    RreviewApp(
       services: services,
       intake: ShareIntake.forPlatform(),
       launchFiles: _launchFiles(args),
@@ -50,18 +50,18 @@ Future<void> main(List<String> args) async {
   );
 }
 
-/// Desktop: `openreview game.pgn` or OPENREVIEW_IMPORT=/path/game.pgn imports on start.
+/// Desktop: `rreview game.pgn` or RREVIEW_IMPORT=/path/game.pgn imports on start.
 List<String> _launchFiles(List<String> args) {
   final out = <String>[...args.where((a) => a.toLowerCase().endsWith('.pgn'))];
-  final env = Platform.environment['OPENREVIEW_IMPORT'];
+  final env = Platform.environment['RREVIEW_IMPORT'];
   if (env != null && env.isNotEmpty) out.add(env);
   return out;
 }
 
 final navigatorKey = GlobalKey<NavigatorState>();
 
-class OpenReviewApp extends StatefulWidget {
-  const OpenReviewApp({
+class RreviewApp extends StatefulWidget {
+  const RreviewApp({
     super.key,
     required this.services,
     required this.intake,
@@ -72,10 +72,10 @@ class OpenReviewApp extends StatefulWidget {
   final List<String> launchFiles;
 
   @override
-  State<OpenReviewApp> createState() => _OpenReviewAppState();
+  State<RreviewApp> createState() => _RreviewAppState();
 }
 
-class _OpenReviewAppState extends State<OpenReviewApp> {
+class _RreviewAppState extends State<RreviewApp> {
   StreamSubscription<SharedItem>? _sub;
   late final AppLifecycleListener _lifecycle;
 
@@ -174,7 +174,7 @@ class _OpenReviewAppState extends State<OpenReviewApp> {
       child: ListenableBuilder(
         listenable: widget.services.settings,
         builder: (context, _) => MaterialApp(
-          title: 'OpenReview',
+          title: 'rreview',
           navigatorKey: navigatorKey,
           debugShowCheckedModeBanner: false,
           themeMode: widget.services.settings.themeMode,

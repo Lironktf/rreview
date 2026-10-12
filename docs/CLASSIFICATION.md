@@ -6,7 +6,7 @@ in one place.
 
 ## 1. Scores and perspective
 
-- The engine reports scores relative to the side to move. OpenReview converts every score to **White's
+- The engine reports scores relative to the side to move. rreview converts every score to **White's
   perspective** immediately (`Score.fromUci`) and stores it that way. Displayed numbers are always White-relative:
   `+1.2` means White is better.
 - **Mate scores are kept separate from centipawns** (`Score.mate(n)`, n in moves, negative = Black mates) and never
@@ -70,9 +70,9 @@ Black. Unit tests cover both colours, mate reversals, and the Missed-win band.
 "Brilliant" is deliberately not awarded: reliable detection needs sacrifice verification beyond what a single engine
 line proves, and a wrong "brilliant" is worse than none.
 
-## 4. OpenReview accuracy
+## 4. rreview accuracy
 
-This is OpenReview's own number. It is **not** Chess.com's accuracy and no parity is claimed.
+This is rreview's own number. It is **not** Chess.com's accuracy and no parity is claimed.
 
 - Per move: `accuracy = 100 · exp(−4.2 · loss)`, clamped to [0, 100]. 0 loss → 100; 0.05 → 81; 0.10 → 66; 0.20 → 43.
 - Per player: the mean of the harmonic mean and the arithmetic mean of the per-move values (book moves excluded).

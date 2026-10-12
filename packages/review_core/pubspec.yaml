@@ -1,5 +1,5 @@
 name: review_core
-description: Analysis pipeline, move classification, accuracy, explanations and import resolvers for OpenReview. Pure Dart.
+description: Analysis pipeline, move classification, accuracy, explanations and import resolvers for rreview. Pure Dart.
 version: 0.1.0
 publish_to: none
 environment:

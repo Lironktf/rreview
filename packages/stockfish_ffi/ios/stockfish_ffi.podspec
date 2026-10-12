@@ -1,5 +1,5 @@
 #
-# OpenReview Stockfish FFI plugin (CocoaPods). Compiles the vendored, unmodified
+# rreview Stockfish FFI plugin (CocoaPods). Compiles the vendored, unmodified
 # Stockfish 19 sources (GPLv3) plus a small bridge into the app binary.
 # Flags mirror lichess's production multistockfish podspec (Stockfish 19 on iOS).
 # A Swift Package manifest for the same sources lives in stockfish_ffi/Package.swift.
@@ -7,13 +7,13 @@
 Pod::Spec.new do |s|
   s.name             = 'stockfish_ffi'
   s.version          = '1.0.0'
-  s.summary          = 'Stockfish 19 chess engine for OpenReview, driven over UCI through Dart FFI.'
+  s.summary          = 'Stockfish 19 chess engine for rreview, driven over UCI through Dart FFI.'
   s.description      = <<-DESC
 Stockfish 19 (GPLv3) compiled from source for iOS with NEON, driven in-process through Dart FFI.
                        DESC
-  s.homepage         = 'https://github.com/Lironktf/openreview'
+  s.homepage         = 'https://github.com/Lironktf/rreview'
   s.license          = { :type => 'GPL-3.0-or-later', :file => '../LICENSE' }
-  s.author           = { 'OpenReview' => 'openreview@lironkatsif.com' }
+  s.author           = { 'rreview' => 'rreview@lironkatsif.com' }
 
   s.source           = { :path => '.' }
   s.source_files = [

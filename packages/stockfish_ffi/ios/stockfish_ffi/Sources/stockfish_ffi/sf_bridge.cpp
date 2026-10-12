@@ -1,4 +1,4 @@
-// OpenReview Stockfish bridge.
+// rreview Stockfish bridge.
 //
 // Runs an unmodified Stockfish UCI loop on a background thread inside the host
 // process. Instead of pipes or dup2 (fragile on iOS), the process-wide
@@ -166,7 +166,7 @@ void engine_thread_main(OutputBuffer* out) {
     {
         auto uci = std::make_unique<Stockfish::UCIEngine>(std::move(cli));
         Stockfish::Tune::init(uci->engine_options());
-        out->push_line("info string OpenReview bridge ready, " + Stockfish::engine_info());
+        out->push_line("info string rreview bridge ready, " + Stockfish::engine_info());
         uci->loop();
     }
     out->push_line("quitok");

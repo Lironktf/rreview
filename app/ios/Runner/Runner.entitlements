@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.lironkatsif.openreview</string>
+		<string>group.com.lironkatsif.rreview</string>
 	</array>
 </dict>
 </plist>

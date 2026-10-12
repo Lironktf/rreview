@@ -1,4 +1,4 @@
-/// Native "share intake" layer: items handed to OpenReview by the OS
+/// Native "share intake" layer: items handed to rreview by the OS
 /// (iOS share extension / "Open in", Android share and VIEW intents).
 ///
 /// Pure Dart + platform channels, no third-party packages. The native side
@@ -142,7 +142,7 @@ abstract class ShareIntake {
   /// app returns to the foreground.
   Future<List<SharedItem>> takePending();
 
-  /// New items arriving while the app runs (warm start via the `openreview://`
+  /// New items arriving while the app runs (warm start via the `rreview://`
   /// URL scheme, "Open in", or a new Android intent). Broadcast stream.
   Stream<SharedItem> get incoming;
 
@@ -177,8 +177,8 @@ class ChannelShareIntake extends ShareIntake {
   })  : _methods = methodChannel ?? const MethodChannel(methodChannelName),
         _events = eventChannel ?? const EventChannel(eventChannelName);
 
-  static const String methodChannelName = 'openreview/share_intake';
-  static const String eventChannelName = 'openreview/share_intake/events';
+  static const String methodChannelName = 'rreview/share_intake';
+  static const String eventChannelName = 'rreview/share_intake/events';
 
   final MethodChannel _methods;
   final EventChannel _events;

@@ -17,8 +17,8 @@ verified structure of lichess's production Stockfish plugin; expect small first-
   integration (`flutter config --enable-swift-package-manager`, on by default in 3.47). The plugin ships both a podspec
   and a `Package.swift`. If you want SPM only, delete `app/ios/Podfile`.
 - Flutter 3.47.x: `flutter doctor` must show Xcode and the iOS toolchain green.
-- An Apple Developer account. Bundle identifiers used: `com.lironkatsif.openreview` (Runner) and
-  `com.lironkatsif.openreview.ShareExtension`. App Group: `group.com.lironkatsif.openreview`. Change them in
+- An Apple Developer account. Bundle identifiers used: `com.lironkatsif.rreview` (Runner) and
+  `com.lironkatsif.rreview.ShareExtension`. App Group: `group.com.lironkatsif.rreview`. Change them in
   `app/ios/Runner.xcodeproj/project.pbxproj`, both `.entitlements` files and `app/ios/Shared/ShareInbox.swift` if you
   need different ones.
 
@@ -27,7 +27,7 @@ verified structure of lichess's production Stockfish plugin; expect small first-
 1. `cd app && flutter pub get && flutter precache --ios`.
 2. `open ios/Runner.xcworkspace` (after `pod install` in `ios/`, or `Runner.xcodeproj` for SPM).
 3. Signing & Capabilities, **Runner** target: set your Team; add the **App Groups** capability and tick
-   `group.com.lironkatsif.openreview` (Xcode registers it with the developer portal).
+   `group.com.lironkatsif.rreview` (Xcode registers it with the developer portal).
 4. Same for the **ShareExtension** target (Team + App Groups with the same group).
 5. Build Phases of Runner: confirm "Embed Foundation Extensions" contains `ShareExtension.appex` and sits **before**
    "Thin Binary". Confirm the Runner's "Strip Style" is *Non-Global Symbols* (Build Settings) so the `sf_*` symbols
@@ -42,8 +42,8 @@ verified structure of lichess's production Stockfish plugin; expect small first-
 1. Import by pasting `https://lichess.org/tkJnElwm` → review opens, analysis runs, badges appear progressively.
 2. Import a Chess.com link without a stored username → the sheet asks for one, saves it, retries, finds the game.
 3. Share from the Chess.com app: Options → Share Game (link) and Game Analysis → Share (PGN text): both must open
-   OpenReview with the game imported. Cold start and warm start. Share the same game twice → "already in your library".
-4. Share a `.pgn` file from Files; open a `.pgn` attachment from Mail with "Open in OpenReview".
+   rreview with the game imported. Cold start and warm start. Share the same game twice → "already in your library".
+4. Share a `.pgn` file from Files; open a `.pgn` attachment from Mail with "Open in rreview".
 5. Kill the app mid-analysis; relaunch → the review resumes where it stopped.
 6. Airplane mode: paste PGN → analysis works offline; paste a link → clear network error with the PGN fallback.
 7. Deep preset on a 100-move game: watch memory (Hash 16 MB ⇒ engine stays well under 150 MB) and thermals.

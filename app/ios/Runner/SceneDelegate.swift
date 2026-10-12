@@ -5,10 +5,10 @@ import UIKit
 /// foreground transitions to `ShareIntakePlugin` after letting Flutter do its
 /// own plugin forwarding. Flutter's built-in deep linking is disabled in
 /// Info.plist (`FlutterDeepLinkingEnabled` = false) because we handle
-/// `openreview://` and `.pgn` file URLs here.
+/// `rreview://` and `.pgn` file URLs here.
 class SceneDelegate: FlutterSceneDelegate {
 
-  // Cold start via URL (openreview://import or a .pgn "Open in").
+  // Cold start via URL (rreview://import or a .pgn "Open in").
   override func scene(_ scene: UIScene, willConnectTo session: UISceneSession,
                       options connectionOptions: UIScene.ConnectionOptions) {
     super.scene(scene, willConnectTo: session, options: connectionOptions)

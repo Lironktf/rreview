@@ -1,4 +1,4 @@
-/// OpenReview accuracy: a documented, app-specific score. Not Chess.com's.
+/// rreview accuracy: a documented, app-specific score. Not Chess.com's.
 library;
 
 import 'dart:math' as math;
