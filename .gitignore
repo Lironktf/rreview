@@ -1,0 +1,15 @@
+# Dart / Flutter
+**/.dart_tool/
+**/build/
+**/.flutter-plugins-dependencies
+**/pubspec.lock
+!app/pubspec.lock
+**/*.iml
+.idea/
+# Native build output
+packages/stockfish_ffi/src/build/
+# OS
+.DS_Store
+
+# Engine network (98 MB): fetched by scripts/fetch_nnue.sh
+app/assets/engine/*.nnue
