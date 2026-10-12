@@ -1,0 +1,12 @@
+name: review_core
+description: Analysis pipeline, move classification, accuracy, explanations and import resolvers for OpenReview. Pure Dart.
+version: 0.1.0
+publish_to: none
+environment:
+  sdk: ^3.13.0
+dependencies:
+  chess_core:
+    path: ../chess_core
+  http: ^1.2.0
+dev_dependencies:
+  test: ^1.25.0
